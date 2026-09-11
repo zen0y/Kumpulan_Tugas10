@@ -1,11 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sky.net - Glassmorphism Edition</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top left, #1a103c, #0a061a, #020108);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-popular {
+            background: rgba(139, 92, 246, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+        }
+    </style>
 </head>
-<body>
-    
+<body class="text-white min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="w-full py-5 px-6 md:px-16 flex justify-between items-center border-b border-white/5 backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400">
+                Sky<span class="text-white">.net</span>
+            </span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 text-sm text-gray-300 font-medium">
+            <a href="#" class="hover:text-purple-400 transition">Beranda</a>
+            <a href="#pricing" class="hover:text-purple-400 transition">Pilihan Paket</a>
+            <a href="#" class="hover:text-purple-400 transition">Tentang Kami</a>
+        </div>
+        <a href="#pricing" class="px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-purple-600 hover:bg-purple-500 text-white transition shadow-lg shadow-purple-600/30">
+            Akses Cepat
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow px-4 py-16 max-w-6xl mx-auto w-full">
+        
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="inline-block py-1 px-4 rounded-full text-xs font-semibold bg-purple-500/10 border border-purple-500/30 text-purple-300 mb-4">
+                ✨ Next-Gen Hotspot Connection
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                Pilih Waktumu, <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Jelajahi Dunia Tanpa Batas</span>
+            </h1>
+            <p class="text-gray-400 text-sm md:text-base">
+                Jaringan internet berkecepatan tinggi dengan sistem waktu fleksibel. Aktifkan koneksi Anda sekarang juga dalam hitungan detik.
+            </p>
+        </div>
+
+        <!-- Pricing Cards Section -->
+        <div id="pricing" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-center">
+            
+            <!-- 1 Jam -->
+            <div class="glass-card rounded-3xl p-8 flex flex-col justify-between transition hover:border-purple-500/50">
+                <div>
+                    <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-2">Express Pass</div>
+                    <h3 class="text-3xl font-extrabold mb-4">1 Jam</h3>
+                    <p class="text-gray-400 text-xs mb-6 leading-relaxed">Pas untuk urusan mendadak, unduh file kecil, atau chat kilat.</p>
+                    <div class="text-3xl font-black mb-6 text-white">Rp 3.000</div>
+                    <ul class="text-xs text-gray-300 space-y-3 mb-8">
+                        <li class="flex items-center gap-2">✔️ Akses Full Speed</li>
+                        <li class="flex items-center gap-2">✔️ 1 Perangkat Aktif</li>
+                    </ul>
+                </div>
+                <button onclick="pilihPaket('1 Jam', 'Rp 3.000')" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 font-bold text-xs uppercase tracking-wider transition">
+                    Pilih 1 Jam
+                </button>
+            </div>
+
+            <!-- 12 Jam (Paling Populer) -->
+            <div class="glass-card-popular rounded-3xl p-8 flex flex-col justify-between relative transform md:-translate-y-4">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[10px] font-extrabold tracking-widest px-3 py-1 rounded-full uppercase shadow-md">
+                    Paling Diminati
+                </div>
+                <div>
+                    <div class="text-xs font-bold tracking-widest text-purple-300 uppercase mb-2">Half Day Pass</div>
+                    <h3 class="text-3xl font-extrabold mb-4">12 Jam</h3>
+                    <p class="text-gray-300 text-xs mb-6 leading-relaxed">Solusi terbaik untuk kerja harian, kuliah online, atau streaming puas.</p>
+                    <div class="text-3xl font-black mb-6 text-white">Rp 15.000</div>
+                    <ul class="text-xs text-gray-200 space-y-3 mb-8">
+                        <li class="flex items-center gap-2">✔️ Kecepatan Maksimal</li>
+                        <li class="flex items-center gap-2">✔️ Hingga 2 Perangkat</li>
+                        <li class="flex items-center gap-2">✔️ Tanpa Batas Kuota (FUP)</li>
+                    </ul>
+                </div>
+                <button onclick="pilihPaket('12 Jam', 'Rp 15.000')" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90 font-bold text-xs uppercase tracking-wider transition shadow-lg shadow-purple-500/25">
+                    Pilih 12 Jam
+                </button>
+            </div>
+
+            <!-- 24 Jam -->
+            <div class="glass-card rounded-3xl p-8 flex flex-col justify-between transition hover:border-purple-500/50">
+                <div>
+                    <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-2">Full Day Pass</div>
+                    <h3 class="text-3xl font-extrabold mb-4">24 Jam</h3>
+                    <p class="text-gray-400 text-xs mb-6 leading-relaxed">Kebebasan penuh seharian penuh tanpa gangguan jaringan lemot.</p>
+                    <div class="text-3xl font-black mb-6 text-white">Rp 25.000</div>
+                    <ul class="text-xs text-gray-300 space-y-3 mb-8">
+                        <li class="flex items-center gap-2">✔️ Akses Full Speed</li>
+                        <li class="flex items-center gap-2">✔️ Hingga 3 Perangkat</li>
+                        <li class="flex items-center gap-2">✔️ Prioritas Jaringan Tinggi</li>
+                    </ul>
+                </div>
+                <button onclick="pilihPaket('24 Jam', 'Rp 25.000')" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 font-bold text-xs uppercase tracking-wider transition">
+                    Pilih 24 Jam
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center text-xs text-gray-500 border-t border-white/5">
+        &copy; 2026 Sky.net. All rights reserved.
+    </footer>
+
+    <!-- JavaScript Interaksi -->
+    <script>
+        function pilihPaket(durasi, harga) {
+            alert(`Terima kasih! Anda memilih paket Sky.net ${durasi} (${harga}). Silakan selesaikan pembayaran.`);
+        }
+    </script>
+</body>
+</html>
+
+    <!-- JavaScript Sederhana untuk Interaksi Tombol -->
+    <script>
+        function pilihPaket(durasi, harga) {
+            alert(`Anda memilih paket Sky.net durasi ${durasi} seharga ${harga}. Silakan lanjutkan ke pembayaran.`);
+        }
+    </script>
 </body>
 </html>
