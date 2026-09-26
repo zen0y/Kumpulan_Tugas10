@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(12, 12, 12);
+}
+.title{
+    font-size:15px ;
+    color: rgba(0, 255, 255, 0.945);
+}
+#sub-title{
+    font-size:  15px; 
+    color: rgb(242, 247, 247);
+    highlight-color: red;
+}
+#heading{
+    font-size: 25px;
+    color: aliceblue
+}
+p{
+    font-size:10 ;
+    color:aliceblue ;
+}
+button{
+    padding: 20px;
+    border-radius:10% ;
+    border: 5px;
+    color:rgb(227, 230, 233) ;
+    background-color:rgba(89, 88, 90, 0.61) ;
+
+}
