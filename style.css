@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(6, 13, 44);
+}
+.title{
+    font-size: 45px;
+}
+#sub-title{
+    font-size: 20px;
+color: rgb(87, 85, 85);
+}
+#heading{
+    color: aqua;
+}
+p{
+   color: aliceblue ;
+}
+button{
+    padding: 20px;
+    border-radius: 10%;
+    border: 5px;
+    color: aliceblue;
+    background-color: blueviolet;
+}
